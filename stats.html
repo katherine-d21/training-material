@@ -402,8 +402,8 @@
                 Galaxy Server administration
             </a>
 </td>
-        <td><a href="/training-material//topics/admin/tutorials/monitoring/tutorial.html">
-            Galaxy Monitoring with Telegraf and Grafana
+        <td><a href="/training-material//topics/admin/tutorials/singularity/tutorial.html">
+            Use Singularity containers for running Galaxy jobs
             </a></td>
       </tr>
     
@@ -430,8 +430,50 @@
                 Galaxy Server administration
             </a>
 </td>
-        <td><a href="/training-material//topics/admin/tutorials/connect-to-compute-cluster/tutorial.html">
-            Connecting Galaxy to a compute cluster
+        <td><a href="/training-material//topics/admin/tutorials/cvmfs/tutorial.html">
+            Reference Data with CVMFS
+            </a></td>
+      </tr>
+    
+            
+            
+      <tr>
+        <td>Mar 30, 2022</td>
+        <td style="text-align:right">
+            <a href="/training-material/topics/admin">
+                Galaxy Server administration
+            </a>
+</td>
+        <td><a href="/training-material//topics/admin/tutorials/interactive-tools/tutorial.html">
+            Galaxy Interactive Tools
+            </a></td>
+      </tr>
+    
+            
+            
+      <tr>
+        <td>Mar 30, 2022</td>
+        <td style="text-align:right">
+            <a href="/training-material/topics/admin">
+                Galaxy Server administration
+            </a>
+</td>
+        <td><a href="/training-material//topics/admin/tutorials/object-store/tutorial.html">
+            Distributed Object Storage
+            </a></td>
+      </tr>
+    
+            
+            
+      <tr>
+        <td>Mar 30, 2022</td>
+        <td style="text-align:right">
+            <a href="/training-material/topics/admin">
+                Galaxy Server administration
+            </a>
+</td>
+        <td><a href="/training-material//topics/admin/tutorials/upgrading/tutorial.html">
+            Upgrading Galaxy
             </a></td>
       </tr>
     
@@ -458,48 +500,6 @@
                 Galaxy Server administration
             </a>
 </td>
-        <td><a href="/training-material//topics/admin/tutorials/singularity/tutorial.html">
-            Use Singularity containers for running Galaxy jobs
-            </a></td>
-      </tr>
-    
-            
-            
-      <tr>
-        <td>Mar 30, 2022</td>
-        <td style="text-align:right">
-            <a href="/training-material/topics/admin">
-                Galaxy Server administration
-            </a>
-</td>
-        <td><a href="/training-material//topics/admin/tutorials/reports/tutorial.html">
-            Galaxy Monitoring with Reports
-            </a></td>
-      </tr>
-    
-            
-            
-      <tr>
-        <td>Mar 30, 2022</td>
-        <td style="text-align:right">
-            <a href="/training-material/topics/admin">
-                Galaxy Server administration
-            </a>
-</td>
-        <td><a href="/training-material//topics/admin/tutorials/cvmfs/tutorial.html">
-            Reference Data with CVMFS
-            </a></td>
-      </tr>
-    
-            
-            
-      <tr>
-        <td>Mar 30, 2022</td>
-        <td style="text-align:right">
-            <a href="/training-material/topics/admin">
-                Galaxy Server administration
-            </a>
-</td>
         <td><a href="/training-material//topics/admin/tutorials/job-destinations/tutorial.html">
             Mapping Jobs to Destinations
             </a></td>
@@ -514,8 +514,8 @@
                 Galaxy Server administration
             </a>
 </td>
-        <td><a href="/training-material//topics/admin/tutorials/data-library/tutorial.html">
-            Data Libraries
+        <td><a href="/training-material//topics/admin/tutorials/tus/tutorial.html">
+            Performant Uploads with TUS
             </a></td>
       </tr>
     
@@ -600,8 +600,8 @@ var tutorialsBar = new Chart(tutoBar, {
 // Chart displaying number of tutorials per topic
 var tutoBarTechnical = document.getElementById('tutorialsBarTechnical');
 
-var data_tutos = [21,15,6,14,21,40];
-var labels_topics = ["Development in Galaxy","Foundations of Data Science","Teaching and Hosting Galaxy training","Contributing to the Galaxy Training Material","Using Galaxy and Managing your Data","Galaxy Server administration"];
+var data_tutos = [21,6,21,14,40,15];
+var labels_topics = ["Using Galaxy and Managing your Data","Teaching and Hosting Galaxy training","Development in Galaxy","Contributing to the Galaxy Training Material","Galaxy Server administration","Foundations of Data Science"];
 
 var tutorialsBar = new Chart(tutoBarTechnical, {
   type: 'horizontalBar',
