@@ -179,7 +179,11 @@
   ],
   "supported_servers": {
     "exact": [
-
+      {
+        "url": "https://galaxy.genouest.org",
+        "name": "Galaxy@GenOuest",
+        "usegalaxy": "false"
+      }
     ],
     "inexact": [
 
