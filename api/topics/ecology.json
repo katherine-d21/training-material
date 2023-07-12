@@ -481,11 +481,6 @@
       "supported_servers": {
         "exact": [
           {
-            "url": "https://galaxy.genouest.org",
-            "name": "Galaxy@GenOuest",
-            "usegalaxy": "false"
-          },
-          {
             "url": "https://usegalaxy.eu",
             "name": "UseGalaxy.eu",
             "usegalaxy": "true"
@@ -708,11 +703,6 @@
       ],
       "supported_servers": {
         "exact": [
-          {
-            "url": "https://galaxy.genouest.org",
-            "name": "Galaxy@GenOuest",
-            "usegalaxy": "false"
-          },
           {
             "url": "https://usegalaxy.be/",
             "name": "UseGalaxy.be",
@@ -1963,11 +1953,6 @@
       "supported_servers": {
         "exact": [
           {
-            "url": "https://galaxy.genouest.org",
-            "name": "Galaxy@GenOuest",
-            "usegalaxy": "false"
-          },
-          {
             "url": "https://usegalaxy.eu",
             "name": "UseGalaxy.eu",
             "usegalaxy": "true"
@@ -2117,11 +2102,6 @@
       ],
       "supported_servers": {
         "exact": [
-          {
-            "url": "https://galaxy.genouest.org",
-            "name": "Galaxy@GenOuest",
-            "usegalaxy": "false"
-          },
           {
             "url": "https://usegalaxy.eu",
             "name": "UseGalaxy.eu",
@@ -2288,11 +2268,6 @@
       ],
       "supported_servers": {
         "exact": [
-          {
-            "url": "https://galaxy.genouest.org",
-            "name": "Galaxy@GenOuest",
-            "usegalaxy": "false"
-          },
           {
             "url": "https://usegalaxy.eu",
             "name": "UseGalaxy.eu",
@@ -2520,11 +2495,6 @@
       ],
       "supported_servers": {
         "exact": [
-          {
-            "url": "https://galaxy.genouest.org",
-            "name": "Galaxy@GenOuest",
-            "usegalaxy": "false"
-          },
           {
             "url": "https://usegalaxy.be/",
             "name": "UseGalaxy.be",
@@ -3162,11 +3132,7 @@
       ],
       "supported_servers": {
         "exact": [
-          {
-            "url": "https://galaxy.genouest.org",
-            "name": "Galaxy@GenOuest",
-            "usegalaxy": "false"
-          }
+
         ],
         "inexact": [
 
@@ -3368,11 +3334,6 @@
       ],
       "supported_servers": {
         "exact": [
-          {
-            "url": "https://galaxy.genouest.org",
-            "name": "Galaxy@GenOuest",
-            "usegalaxy": "false"
-          },
           {
             "url": "https://usegalaxy.eu",
             "name": "UseGalaxy.eu",
