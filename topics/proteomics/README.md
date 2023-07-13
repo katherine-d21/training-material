@@ -15,6 +15,7 @@ topic | features
 [metaQuantome-Taxonomy](tutorials/metaquantome-taxonomy/tutorial.md)| [:book:](tutorials/metaquantome-taxonomy/tutorial.md)
 [metaQuantome-Function](tutorials/metaquantome-function/tutorial.md)| [:book:](tutorials/metaquantome-function/tutorial.md)
 [EncyclopeDIA](tutorials/encyclopedia/tutorial.md)| [:book:](tutorials/encyclopedia/tutorial.md)
+[Clinical-mp-database-generation](tutorials/clinical-mp-database-generation/tutorial.md)|[:book:](tutorials/clinical-mp-database-generation/tutorial.md)
 
 The Galaxy community offers many different ways of training. The table above lists all available training features of a specific topic to give you a fast and comprehensive overview.
 
