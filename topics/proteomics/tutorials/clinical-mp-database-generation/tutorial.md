@@ -118,14 +118,15 @@ Metaproteomics {% cite Metaproteomics_video %}  is the large-scale characterizat
 
 ## Sub-step with **UniProt**
 
+For this tutorial, the Species FASTA database has already been provided as an input. However, these are the following steps to generate a FASTA file from a tabular file:
+
 > <hands-on-title> Download Protein Sequences using UniProt XML downloader</hands-on-title>
->
 > 1. {% tool [UniProt](toolshed.g2.bx.psu.edu/repos/galaxyp/uniprotxml_downloader/uniprotxml_downloader/2.3.0) %} with the following parameters:
->    - *"Select"*: `Genera_tabular.tabular`
+>    - *"Select"*: `Species_tabular.tabular`
 >        - {% icon param-file %} *"Dataset (tab separated) with Taxon ID/Name column"*: `output` (Input dataset)
 >        - *"Column with Taxon ID/name"*: `c1`
 >    - *"uniprot output format"*: `fasta`
-> 2. Rename the output as Genera.fasta
+> 2. Rename the output as Species_UniProt_FASTA.fasta
 >
 >    > <comment-title> short description </comment-title>
 >    >
@@ -150,16 +151,7 @@ The idea is to keep the theory description before quite simple to focus more on 
 >
 
 {: .hands_on}
-## Sub-step with **UniProt**
 
-> <hands-on-title> Task description </hands-on-title>
->
-> 1. {% tool [UniProt](toolshed.g2.bx.psu.edu/repos/galaxyp/uniprotxml_downloader/uniprotxml_downloader/2.3.0) %} with the following parameters:
->    - *"Select"*: `Order_Family_tabular.tabular`
->        - {% icon param-file %} *"Dataset (tab separated) with Taxon ID/Name column"*: `output` (Input dataset)
->        - *"Column with Taxon ID/name"*: `c1`
->    - *"uniprot output format"*: `fasta`
-> 2. Rename the output as Order_Family.fasta
 >
 {: .hands_on}
 =======
@@ -180,28 +172,6 @@ A big step can have several subsections or sub steps:
 >
 {: .question}
 
-## Sub-step with **FASTA Merge Files and Filter Unique Sequences**
-
-> <hands-on-title> Task description </hands-on-title>
->
-> 1. {% tool [FASTA Merge Files and Filter Unique Sequences](toolshed.g2.bx.psu.edu/repos/galaxyp/fasta_merge_files_and_filter_unique_sequences/fasta_merge_files_and_filter_unique_sequences/1.2.0) %} with the following parameters:
->    - *"Run in batch mode?"*: `Merge individual FASTAs (output collection if the input is collection)`
->        - In *"Input FASTA File(s)"*:
->            - {% icon param-repeat %} *"Insert Input FASTA File(s)"*
->                - {% icon param-file %} *"FASTA File"*: `output` (Input dataset)
->
->    ***TODO***: *Check parameter descriptions*
->
->    ***TODO***: *Consider adding a comment or tip box*
->
->    > <comment-title> short description </comment-title>
->    >
->    > A comment about the tool or something else. This box can also be in the main text
->    {: .comment}
->
-{: .hands_on}
-
-<<<<<<< Updated upstream
 > <question-title></question-title>
 >
 > 1. Can we select multiple files together?
@@ -210,9 +180,10 @@ A big step can have several subsections or sub steps:
 
 > <question-title></question-title>
 >
-> 1. Question1?
+> 1. How many FASTA files can be merged at once, i.e. is there a limit on number/size of files?
 
-> 2. Question2?
+> 2. How often is the Protein Database Downloader updated?
+
 >
 > > <solution-title></solution-title>
 > >
@@ -233,23 +204,23 @@ A big step can have several subsections or sub steps:
 > <hands-on-title> Task description </hands-on-title>
 >
 > 1. {% tool [Protein Database Downloader](toolshed.g2.bx.psu.edu/repos/galaxyp/dbbuilder/dbbuilder/0.3.4) %} with the following parameters:
->    - *"Dowload from?"*: `UniProtKB`
->        - In *"Taxonomy"*: `Homo sapiens (Human)`
->	 - In  *"Proteome Set"*: `Reference Proteome Set`
->	 - In  *"Include isoform data"*: `Yes`
-> 2. Rename as "Protein Database Human UniProt with Isoforms"
+>    - *"Download from?"*: `cRAP (contaminants)`
+> 2. Rename as "Protein Database Contaminants (cRAP)"
 >
 {: .hands_on}
 
 ## Sub-step with **Protein Database Downloader**
 
 > <hands-on-title> Task description </hands-on-title>
->
 > 1. {% tool [Protein Database Downloader](toolshed.g2.bx.psu.edu/repos/galaxyp/dbbuilder/dbbuilder/0.3.4) %} with the following parameters:
->    - *"Dowload from?"*: `cRAP (contaminants)`
-> 2. Rename as "Protein Database Contaminants (cRAP)"
->
+>    - *"Download from?"*: `UniProtKB(reviewed only)`
+>        - In *"Taxonomy"*: `Homo sapiens (Human)`
+>        - In *"reviewed"*: `UniProtKB/Swiss-Prot (reviewed only)`
+>	 - In  *"Proteome Set"*: `Reference Proteome Set`
+>	 - In  *"Include isoform data"*: `False`
+> 2. Rename as "Protein Database Human SwissProt".
 {: .hands_on}
+
 
 ## Sub-step with **FASTA Merge Files and Filter Unique Sequences**
 
@@ -259,8 +230,10 @@ A big step can have several subsections or sub steps:
 >    - *"Run in batch mode?"*: `Merge individual FASTAs (output collection if input is collection)`
 >        - In *"Input FASTA File(s)"*:
 >            - {% icon param-repeat %} *"Insert Input FASTA File(s)"*
->                - {% icon param-file %} *"FASTA File"*: `Protein Database Human UniProt with Isoforms` (output of **Protein Database Downloader** {% icon tool %})
+>                - {% icon param-file %} *"FASTA File"*: `Species_UniProt_FASTA ` (output of **UniProt XML downloader** {% icon tool %})
+>                - {% icon param-file %} *"FASTA File"*: `Protein Database Human SwissProt` (output of **Protein Database Downloader** {% icon tool %})
 >                - {% icon param-file %} *"FASTA File"*: `Protein Database Contaminants (cRAP)` (output of **Protein Database Downloader** {% icon tool %})
+> 2. Rename out as "Human UniProt Microbial Proteins cRAP for MetaNovo".
 >                  
 {: .hands_on}
 
@@ -284,7 +257,7 @@ A big step can have several subsections or sub steps:
 >        - *"Maximal charge to search for"*: `5`
 >    - In *"Import Filters"*:
 >        - *"The maximal peptide length to consider when importing identification files"*: `50`
->
+>> 2. Rename as "MetaNovo Compact Database".
 >    ***TODO***: *Check parameter descriptions*
 >
 >    ***TODO***: *Consider adding a comment or tip box*
@@ -316,16 +289,7 @@ A big step can have several subsections or sub steps:
 >
 {: .question}
 
-## Sub-step with **Protein Database Downloader**
 
-> <hands-on-title> Task description </hands-on-title>
-> 1. {% tool [Protein Database Downloader](toolshed.g2.bx.psu.edu/repos/galaxyp/dbbuilder/dbbuilder/0.3.4) %} with the following parameters:
->    - *"Dowload from?"*: `UniProtKB(reviewed only)`
->        - In *"Taxonomy"*: `Homo sapiens (Human)`
->	 - In  *"Proteome Set"*: `Reference Proteome Set`
->	 - In  *"Include isoform data"*: `Yes`
-> 2. Rename as "Protein Database Human SwissProt".
-{: .hands_on}
 
 =======
 
@@ -337,7 +301,9 @@ A big step can have several subsections or sub steps:
 >    - *"Run in batch mode?"*: `Merge individual FASTAs (output collection if input is collection)`
 >        - In *"Input FASTA File(s)"*:
 >            - {% icon param-repeat %} *"Insert Input FASTA File(s)"*
->                - {% icon param-file %} *"FASTA File"*: `output` (Input dataset)
+>                - {% icon param-file %} *"FASTA File"*: `MetaNovo Compact Database` (output of **MetaNovo** {% icon tool %})
+>                - {% icon param-file %} *"FASTA File"*: `Protein Database Human SwissProt` (output of **Protein Database Downloader** {% icon tool %})
+>                - {% icon param-file %} *"FASTA File"*: `Protein Database Contaminants (cRAP)` (output of **Protein Database Downloader** {% icon tool %})
 >
 >    ***TODO***: *Check parameter descriptions*
 >
