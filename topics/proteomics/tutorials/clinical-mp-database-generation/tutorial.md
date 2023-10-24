@@ -133,6 +133,29 @@ For this tutorial, the Species FASTA database has already been provided as an in
 >    > This tool will help download the protein fasta sequences by inputting the taxon names.
 >    {: .comment}
 >
+
+{: .question}
+
+> <question-title></question-title>
+>
+> 1. Can we use a higher taxonomy clade than species for the UniProt XML downloader?
+=======
+***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
+
+> > <solution-title></solution-title>
+> >
+
+> > 1. Yes, the UniProt XML downloader can also be used for generating a database from Genus, Family, Order, or any other higher taxonomy clade. 
+=======
+> > 1. **TODO** Answer for question1
+
+> >
+> {: .solution}
+>
+{: .question}
+
+
+
 {: .hands_on}
 =======
 It comes first a description of the step: some background and some theory.
@@ -166,7 +189,7 @@ A big step can have several subsections or sub steps:
 >
 > > <solution-title></solution-title>
 > >
-> > 1. The tools are run separately to reduce the load on the server and tool. If you have a limited number of taxon names then you can run it all together.
+> > 1. The tools are run separately to reduce the load on the server and tool. If you have a limited number of taxon names, then you can run it all together.
 > >
 > {: .solution}
 >
@@ -182,17 +205,14 @@ A big step can have several subsections or sub steps:
 >
 > 1. How many FASTA files can be merged at once, i.e. is there a limit on number/size of files?
 
-> 2. How often is the Protein Database Downloader updated?
-
 >
 > > <solution-title></solution-title>
 > >
 
 > > 1. Yes, that certainly can be done. We used one input file at a time to maintain the order of sequences in the database.
 =======
-> > 1. Answer for question1
+> > 1. **TODO** Answer for question1
 
-> > 2. Answer for question2
 > >
 > {: .solution}
 >
@@ -220,6 +240,27 @@ A big step can have several subsections or sub steps:
 >	 - In  *"Include isoform data"*: `False`
 > 2. Rename as "Protein Database Human SwissProt".
 {: .hands_on}
+
+> <question-title></question-title>
+>
+
+=======
+***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
+
+> <question-title></question-title>
+>
+> 1. How often is the Protein Database Downloader updated?
+
+>
+> > <solution-title></solution-title>
+> >
+
+> > 1. **TODO** Answer for question1
+=======
+> >
+> {: .solution}
+>
+{: .question}
 
 
 ## Sub-step with **FASTA Merge Files and Filter Unique Sequences**
@@ -276,8 +317,9 @@ A big step can have several subsections or sub steps:
 > 1. Why are we reducing the size of the database?
 > 2. Why is this running TMT10 plex modification when the data is 11-plex?
 =======
-> 1. Question1?
-> 2. Question2?
+> 1. Regarding MetaNovo Spectrum Matching parameters, what are the most “important” parameters? Meaning, if a user wants to reduce or increase the sensitivity/number of output sequences, what should they change?
+
+> 2. **TODO** Question2?
 
 >
 > > <solution-title></solution-title>
