@@ -115,14 +115,16 @@ Metaproteomics {% cite Metaproteomics_video %}  is the large-scale characterizat
 # Step-by-step analysis
 
 # Download Protein Sequences using taxon names
+First, we want to generate a large comprehensive protein sequence database using the UniProt XML Downloader to extract sequences for species detected using 16S rRNA sequencing. To do so, you will need a tabular file that contains a list of species of interest.
+
+For this tutorial, a literature survey was conducted to obtain 118 taxonomic species of organisms that are commonly associated with the female reproductive tract **(REF)**. This species list was used to generate a protein sequences FASTA database was generated using the UniProt XML Downloader tool within the Galaxy framework. In this tutorial, the Species FASTA database (3,383,217 sequences) has already been provided as an input. However, if you have your own list of species of interest as a tabular file (Your_Species_tabular.tabular), steps to generate a FASTA file from a tabular file have included:
+
 
 ## Sub-step with **UniProt**
 
-For this tutorial, the Species FASTA database has already been provided as an input. However, these are the following steps to generate a FASTA file from a tabular file:
-
 > <hands-on-title> Download Protein Sequences using UniProt XML downloader</hands-on-title>
 > 1. {% tool [UniProt](toolshed.g2.bx.psu.edu/repos/galaxyp/uniprotxml_downloader/uniprotxml_downloader/2.3.0) %} with the following parameters:
->    - *"Select"*: `Species_tabular.tabular`
+>    - *"Select"*: `Your_Species_tabular.tabular`
 >        - {% icon param-file %} *"Dataset (tab separated) with Taxon ID/Name column"*: `output` (Input dataset)
 >        - *"Column with Taxon ID/name"*: `c1`
 >    - *"uniprot output format"*: `fasta`
@@ -264,6 +266,7 @@ A big step can have several subsections or sub steps:
 
 
 ## Sub-step with **FASTA Merge Files and Filter Unique Sequences**
+Once generated, the Species UniProt database (~3.38 million sequences) will be merged with Human SwissProt database (reviewed only; ~20.4K sequences) and contaminant (cRAP) sequences database (116 sequences), which was then filtered to generate the large comprehensive database (~2.59 million sequences) that will be used to generate a compact database using MetaNovo.
 
 > <hands-on-title> Task description </hands-on-title>
 >
@@ -283,6 +286,7 @@ A big step can have several subsections or sub steps:
 
 
 ## Sub-step with **MetaNovo**
+Next, the large comprehensive database of ~2.59 million sequences can be reduced using the MetaNovo tool **(tool info)** to generate a more manageable database that contains identified proteins. The compact MetaNovo-generated database (~1.9K sequences) will be merged with Human SwissProt (reviewed only) and contaminants (cRAP) databases to generate the reduced database (~21.2k protein sequences) that will be used for peptide identification **(cite Discovery module tutorial)**.
 
 > <hands-on-title> Metanovo tool generates a compact database from your comprehensive database. </hands-on-title>
 >
@@ -360,4 +364,4 @@ A big step can have several subsections or sub steps:
 
 # Conclusion
 
-The first step for the Clinical Metaproteomics study is database generation. As we didn’t have a reference database or information from 16srRNA-seq data, we generated a fasta database doing a literature survey, however, if 16D rRNA data is present, the taxon identified can be used for a customized database generation. As the size of the comprehensive database is generally  too large, we used the Metanovo tool to reduce the size of the database. This reduced database will be then used for clinical metaproteomics discovery workflow.
+The first step for the Clinical Metaproteomics study is database generation. As we didn’t have a reference database or information from 16srRNA-seq data, we generated a fasta database doing a literature survey, however, if 16S rRNA data is present, the taxon identified can be used for a customized database generation. As the size of the comprehensive database is generally  too large, we used the Metanovo tool to reduce the size of the database. This reduced database will be then used for clinical metaproteomics discovery workflow.
