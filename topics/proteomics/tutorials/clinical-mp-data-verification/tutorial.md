@@ -139,49 +139,15 @@ The idea is to keep the theory description before quite simple to focus more on 
 A big step can have several subsections or sub steps:
 
 
-## Sub-step with **FASTA Merge Files and Filter Unique Sequences**
 
-> <hands-on-title> Task description </hands-on-title>
->
-> 1. {% tool [FASTA Merge Files and Filter Unique Sequences](toolshed.g2.bx.psu.edu/repos/galaxyp/fasta_merge_files_and_filter_unique_sequences/fasta_merge_files_and_filter_unique_sequences/1.2.0) %} with the following parameters:
->    - *"Run in batch mode?"*: `Merge individual FASTAs (output collection if input is collection)`
->        - In *"Input FASTA File(s)"*:
->            - {% icon param-repeat %} *"Insert Input FASTA File(s)"*
->                - {% icon param-file %} *"FASTA File"*: `output_database` (output of **Protein Database Downloader** {% icon tool %})
->
->    ***TODO***: *Check parameter descriptions*
->
->    ***TODO***: *Consider adding a comment or tip box*
->
->    > <comment-title> short description </comment-title>
->    >
->    > A comment about the tool or something else. This box can also be in the main text
->    {: .comment}
->
-{: .hands_on}
-
-***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
-
-> <question-title></question-title>
->
-> 1. Question1?
-> 2. Question2?
->
-> > <solution-title></solution-title>
-> >
-> > 1. Answer for question1
-> > 2. Answer for question2
-> >
-> {: .solution}
->
-{: .question}
+We will use the Cut tool (**cite tool info?**) to select out the peptide and protein columns from the SearchGUI/PeptideShaker and MaxQuant Peptide Reports.
 
 ## Sub-step with **Cut**
 
 > <hands-on-title> Task description </hands-on-title>
 >
 > 1. {% tool [Cut](Cut1) %} with the following parameters:
->    - *"Cut columns"*: `c2,c6`
+>    - *"Cut columns"*: `c6,c2`
 >    - {% icon param-file %} *"From"*: `output` (Input dataset)
 >
 >    ***TODO***: *Check parameter descriptions*
@@ -246,7 +212,156 @@ A big step can have several subsections or sub steps:
 >
 {: .question}
 
+Then, we will remove the header line from each of the Cut outputs in order to concatenate (link) them together more easily, using the Concatenate tool (**cite tool?**).
+
+## Sub-step with **Remove beginning**
+
+> <hands-on-title> Task description </hands-on-title>
+>
+> 1. {% tool [Remove beginning](Remove beginning1) %} with the following parameters:
+>    - {% icon param-file %} *"from"*: `out_file1` (output of **Cut** {% icon tool %})
+>
+>    ***TODO***: *Check parameter descriptions*
+>
+>    ***TODO***: *Consider adding a comment or tip box*
+>
+>    > <comment-title> short description </comment-title>
+>    >
+>    > A comment about the tool or something else. This box can also be in the main text
+>    {: .comment}
+>
+{: .hands_on}
+
+***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
+
+> <question-title></question-title>
+>
+> 1. Question1?
+> 2. Question2?
+>
+> > <solution-title></solution-title>
+> >
+> > 1. Answer for question1
+> > 2. Answer for question2
+> >
+> {: .solution}
+>
+{: .question}
+
+## Sub-step with **Remove beginning**
+
+> <hands-on-title> Task description </hands-on-title>
+>
+> 1. {% tool [Remove beginning](Remove beginning1) %} with the following parameters:
+>    - {% icon param-file %} *"from"*: `out_file1` (output of **Cut** {% icon tool %})
+>
+>    ***TODO***: *Check parameter descriptions*
+>
+>    ***TODO***: *Consider adding a comment or tip box*
+>
+>    > <comment-title> short description </comment-title>
+>    >
+>    > A comment about the tool or something else. This box can also be in the main text
+>    {: .comment}
+>
+{: .hands_on}
+
+***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
+
+> <question-title></question-title>
+>
+> 1. Question1?
+> 2. Question2?
+>
+> > <solution-title></solution-title>
+> >
+> > 1. Answer for question1
+> > 2. Answer for question2
+> >
+> {: .solution}
+>
+{: .question}
+
+## Sub-step with **Concatenate datasets**
+
+We will now concatenate the peptide and protein datasets from SearchGUI/PeptideShaker and MaxQuant. Later, we will generate a list of confident peptides using PepQuery2. The list of confident peptides will be searched against the concatenated peptide-protein datasets from SearchGUI/PeptideShaker and MaxQuant to generate a list of verified peptides.
+
+> <hands-on-title> Task description </hands-on-title>
+>
+> 1. {% tool [Concatenate datasets](toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_cat/0.1.1) %} with the following parameters:
+>    - {% icon param-files %} *"Datasets to concatenate"*: `out_file1` (output of **Remove beginning** {% icon tool %}), `out_file1` (output of **Remove beginning** {% icon tool %})
+>
+>    ***TODO***: *Check parameter descriptions*
+>
+>    ***TODO***: *Consider adding a comment or tip box*
+>
+>    > <comment-title> short description </comment-title>
+>    >
+>    > A comment about the tool or something else. This box can also be in the main text
+>    {: .comment}
+>
+{: .hands_on}
+
+***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
+
+> <question-title></question-title>
+>
+> 1. Question1?
+> 2. Question2?
+>
+> > <solution-title></solution-title>
+> >
+> > 1. Answer for question1
+> > 2. Answer for question2
+> >
+> {: .solution}
+>
+{: .question}
+
+## Sub-step with **FASTA Merge Files and Filter Unique Sequences**
+
+We generate and merge Human UniProt (with Isoforms) and contaminants (cRAP) to make an input database for PepQuery2.
+
+> <hands-on-title> Task description </hands-on-title>
+>
+> 1. {% tool [FASTA Merge Files and Filter Unique Sequences](toolshed.g2.bx.psu.edu/repos/galaxyp/fasta_merge_files_and_filter_unique_sequences/fasta_merge_files_and_filter_unique_sequences/1.2.0) %} with the following parameters:
+>    - *"Run in batch mode?"*: `Merge individual FASTAs (output collection if input is collection)`
+>        - In *"Input FASTA File(s)"*:
+>            - {% icon param-repeat %} *"Insert Input FASTA File(s)"*
+>                - {% icon param-file %} *"FASTA File"*: `Human UniProt+Isoforms FASTA` (output of **Protein Database Downloader** {% icon tool %})
+>                - - {% icon param-file %} *"FASTA File"*: `cRAP database` (output of **Protein Database Downloader** {% icon tool %})
+>
+>    ***TODO***: *Check parameter descriptions*
+>
+>    ***TODO***: *Consider adding a comment or tip box*
+>
+>    > <comment-title> short description </comment-title>
+>    >
+>    > A comment about the tool or something else. This box can also be in the main text
+>    {: .comment}
+>
+{: .hands_on}
+
+***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
+
+> <question-title></question-title>
+>
+> 1. Question1?
+> 2. Question2?
+>
+> > <solution-title></solution-title>
+> >
+> > 1. Answer for question1
+> > 2. Answer for question2
+> >
+> {: .solution}
+>
+{: .question}
+
 ## Sub-step with **PepQuery2**
+
+We will use the list of Distinct Peptides (from the Discovery Module, **cite**), Human UniProt+Isoforms+cRAP database, and our MGF file collection as inputs for PepQuery2. The outputs we are interested in are the four PSM Rank (txt) files (one for each MGF file).
+
 
 > <hands-on-title> Task description </hands-on-title>
 >
@@ -307,75 +422,10 @@ A big step can have several subsections or sub steps:
 >
 {: .question}
 
-## Sub-step with **Remove beginning**
-
-> <hands-on-title> Task description </hands-on-title>
->
-> 1. {% tool [Remove beginning](Remove beginning1) %} with the following parameters:
->    - {% icon param-file %} *"from"*: `out_file1` (output of **Cut** {% icon tool %})
->
->    ***TODO***: *Check parameter descriptions*
->
->    ***TODO***: *Consider adding a comment or tip box*
->
->    > <comment-title> short description </comment-title>
->    >
->    > A comment about the tool or something else. This box can also be in the main text
->    {: .comment}
->
-{: .hands_on}
-
-***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
-
-> <question-title></question-title>
->
-> 1. Question1?
-> 2. Question2?
->
-> > <solution-title></solution-title>
-> >
-> > 1. Answer for question1
-> > 2. Answer for question2
-> >
-> {: .solution}
->
-{: .question}
-
-## Sub-step with **Remove beginning**
-
-> <hands-on-title> Task description </hands-on-title>
->
-> 1. {% tool [Remove beginning](Remove beginning1) %} with the following parameters:
->    - {% icon param-file %} *"from"*: `out_file1` (output of **Cut** {% icon tool %})
->
->    ***TODO***: *Check parameter descriptions*
->
->    ***TODO***: *Consider adding a comment or tip box*
->
->    > <comment-title> short description </comment-title>
->    >
->    > A comment about the tool or something else. This box can also be in the main text
->    {: .comment}
->
-{: .hands_on}
-
-***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
-
-> <question-title></question-title>
->
-> 1. Question1?
-> 2. Question2?
->
-> > <solution-title></solution-title>
-> >
-> > 1. Answer for question1
-> > 2. Answer for question2
-> >
-> {: .solution}
->
-{: .question}
-
 ## Sub-step with **Collapse Collection**
+
+Remember that PepQuery2 generates a PSM Rank file for each input MGF file, so we will have four PSM Rank files. To make the analysis more efficient, we will collaspe these four PSM Rank files into one dataset.
+
 
 > <hands-on-title> Task description </hands-on-title>
 >
@@ -410,41 +460,11 @@ A big step can have several subsections or sub steps:
 >
 {: .question}
 
-## Sub-step with **Concatenate datasets**
 
-> <hands-on-title> Task description </hands-on-title>
->
-> 1. {% tool [Concatenate datasets](toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_cat/0.1.1) %} with the following parameters:
->    - {% icon param-files %} *"Datasets to concatenate"*: `out_file1` (output of **Remove beginning** {% icon tool %}), `out_file1` (output of **Remove beginning** {% icon tool %})
->
->    ***TODO***: *Check parameter descriptions*
->
->    ***TODO***: *Consider adding a comment or tip box*
->
->    > <comment-title> short description </comment-title>
->    >
->    > A comment about the tool or something else. This box can also be in the main text
->    {: .comment}
->
-{: .hands_on}
-
-***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
-
-> <question-title></question-title>
->
-> 1. Question1?
-> 2. Question2?
->
-> > <solution-title></solution-title>
-> >
-> > 1. Answer for question1
-> > 2. Answer for question2
-> >
-> {: .solution}
->
-{: .question}
 
 ## Sub-step with **Filter**
+
+Now, we want to filter for confident peptides from PepQuery2.
 
 > <hands-on-title> Task description </hands-on-title>
 >
@@ -551,6 +571,10 @@ A big step can have several subsections or sub steps:
 
 ## Sub-step with **Query Tabular**
 
+We will use the Query Tabular tool (**cite tool***) to search the PepQuery-verified peptides against the concatenated dataset that contains peptides and proteins from SearchGUI/Peptide and MaxQuant.
+
+
+
 > <hands-on-title> Task description </hands-on-title>
 >
 > 1. {% tool [Query Tabular](toolshed.g2.bx.psu.edu/repos/iuc/query_tabular/query_tabular/3.3.0) %} with the following parameters:
@@ -633,6 +657,8 @@ INNER JOIN  prot on pep.mpep=prot.pep `
 
 ## Sub-step with **Group**
 
+Using the Group tool, we will be able to select out distinct (unique) peptides and proteins from the Query Tabular tool.
+
 > <hands-on-title> Task description </hands-on-title>
 >
 > 1. {% tool [Group](Grouping1) %} with the following parameters:
@@ -671,6 +697,8 @@ INNER JOIN  prot on pep.mpep=prot.pep `
 {: .question}
 
 ## Sub-step with **Query Tabular**
+
+Again, we will use the Query Tabular tool to retrieve UniProt IDs (accession numbers) for the distinct (grouped) peptides.
 
 > <hands-on-title> Task description </hands-on-title>
 >
@@ -733,6 +761,8 @@ from t1`
 
 ## Sub-step with **UniProt**
 
+Using the UniProt IDs from Query Tabular, we will be able to generate a FASTA database for our PepQuery-verified peptides.
+
 > <hands-on-title> Task description </hands-on-title>
 >
 > 1. {% tool [UniProt](toolshed.g2.bx.psu.edu/repos/galaxyp/uniprotxml_downloader/uniprotxml_downloader/2.4.0) %} with the following parameters:
@@ -770,6 +800,8 @@ from t1`
 {: .question}
 
 ## Sub-step with **FASTA Merge Files and Filter Unique Sequences**
+
+Lastly, we will merge the Human UniProt (with isoforms), contaminants (cRAP) and the PepQuery-verified FASTA databases into one Quantitation Database that will be used as input for the Quantitation Module (**add link for Quantitation Module**).
 
 > <hands-on-title> Task description </hands-on-title>
 >
