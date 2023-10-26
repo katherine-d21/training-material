@@ -164,8 +164,8 @@ A big step can have several subsections or sub steps:
 >
 > > <solution-title></solution-title>
 > >
-> > 1. Answer for question1
-> > 2. Answer for question2
+> > 1. **TODO** Answer for question1
+> > 2. **TODO** Answer for question2
 > >
 > {: .solution}
 >
@@ -198,13 +198,13 @@ A big step can have several subsections or sub steps:
 
 > <question-title></question-title>
 >
-> 1. Question1?
+> 1. Why do we need to use MGF instead of RAW files for Search GUI?
 > 2. Question2?
 >
 > > <solution-title></solution-title>
 > >
-> > 1. Answer for question1
-> > 2. Answer for question2
+> > 1. **TODO** Answer for question1
+> > 2. **TODO** Answer for question2
 > >
 > {: .solution}
 >
@@ -240,8 +240,8 @@ A big step can have several subsections or sub steps:
 >
 > > <solution-title></solution-title>
 > >
-> > 1. Answer for question1
-> > 2. Answer for question2
+> > 1. **TODO** Answer for question1
+> > 2. **TODO** Answer for question2
 > >
 > {: .solution}
 >
@@ -292,13 +292,13 @@ A big step can have several subsections or sub steps:
 
 > <question-title></question-title>
 >
-> 1. Question1?
+> 1. What is the Experimental Design file for MaxQuant?
 > 2. Question2?
 >
 > > <solution-title></solution-title>
 > >
-> > 1. Answer for question1
-> > 2. Answer for question2
+> > 1. **TODO** Answer for question1
+> > 2. **TODO** Answer for question2
 > >
 > {: .solution}
 >
@@ -329,13 +329,13 @@ A big step can have several subsections or sub steps:
 
 > <question-title></question-title>
 >
-> 1. Question1?
+> 1. Why do we need to add decoy sequences to our FASTA database for Search GUI? And how many do we need to add?
 > 2. Question2?
 >
 > > <solution-title></solution-title>
 > >
-> > 1. Answer for question1
-> > 2. Answer for question2
+> > 1. **TODO** Answer for question1
+> > 2. **TODO** Answer for question2
 > >
 > {: .solution}
 >
@@ -368,8 +368,8 @@ A big step can have several subsections or sub steps:
 >
 > > <solution-title></solution-title>
 > >
-> > 1. Answer for question1
-> > 2. Answer for question2
+> > 1. **TODO** Answer for question1
+> > 2. **TODO** Answer for question2
 > >
 > {: .solution}
 >
@@ -405,8 +405,8 @@ A big step can have several subsections or sub steps:
 >
 > > <solution-title></solution-title>
 > >
-> > 1. Answer for question1
-> > 2. Answer for question2
+> > 1. **TODO** Answer for question1
+> > 2. **TODO** Answer for question2
 > >
 > {: .solution}
 >
@@ -437,13 +437,13 @@ A big step can have several subsections or sub steps:
 
 > <question-title></question-title>
 >
-> 1. Question1?
+> 1. What are the differences between the following reports from PeptideShaker: PSM report, Peptide report, and Protein report?
 > 2. Question2?
 >
 > > <solution-title></solution-title>
 > >
-> > 1. Answer for question1
-> > 2. Answer for question2
+> > 1. **TODO** Answer for question1
+> > 2. **TODO** Answer for question2
 > >
 > {: .solution}
 >
@@ -480,13 +480,13 @@ A big step can have several subsections or sub steps:
 
 > <question-title></question-title>
 >
-> 1. Question1?
+> 1. What’s the difference between a FASTA and Tabular output?
 > 2. Question2?
 >
 > > <solution-title></solution-title>
 > >
-> > 1. Answer for question1
-> > 2. Answer for question2
+> > 1. **TODO** Answer for question1
+> > 2. **TODO** Answer for question2
 > >
 > {: .solution}
 >
@@ -520,8 +520,8 @@ A big step can have several subsections or sub steps:
 >
 > > <solution-title></solution-title>
 > >
-> > 1. Answer for question1
-> > 2. Answer for question2
+> > 1. **TODO** Answer for question1
+> > 2. **TODO** Answer for question2
 > >
 > {: .solution}
 >
@@ -557,8 +557,8 @@ A big step can have several subsections or sub steps:
 >
 > > <solution-title></solution-title>
 > >
-> > 1. Answer for question1
-> > 2. Answer for question2
+> > 1. **TODO** Answer for question1
+> > 2. **TODO** Answer for question2
 > >
 > {: .solution}
 >
@@ -594,8 +594,8 @@ A big step can have several subsections or sub steps:
 >
 > > <solution-title></solution-title>
 > >
-> > 1. Answer for question1
-> > 2. Answer for question2
+> > 1. **TODO** Answer for question1
+> > 2. **TODO** Answer for question2
 > >
 > {: .solution}
 >
@@ -628,8 +628,8 @@ A big step can have several subsections or sub steps:
 >
 > > <solution-title></solution-title>
 > >
-> > 1. Answer for question1
-> > 2. Answer for question2
+> > 1. **TODO** Answer for question1
+> > 2. **TODO** Answer for question2
 > >
 > {: .solution}
 >
@@ -659,13 +659,13 @@ A big step can have several subsections or sub steps:
 
 > <question-title></question-title>
 >
-> 1. Question1?
+> 1. In the Filtering steps, what does “Confident” mean quantitatively, i.e. what is the percentage cutoff?
 > 2. Question2?
 >
 > > <solution-title></solution-title>
 > >
-> > 1. Answer for question1
-> > 2. Answer for question2
+> > 1. **TODO** Answer for question1
+> > 2. **TODO** Answer for question2
 > >
 > {: .solution}
 >
@@ -700,8 +700,8 @@ A big step can have several subsections or sub steps:
 >
 > > <solution-title></solution-title>
 > >
-> > 1. Answer for question1
-> > 2. Answer for question2
+> > 1. **TODO** Answer for question1
+> > 2. **TODO** Answer for question2
 > >
 > {: .solution}
 >
@@ -730,13 +730,13 @@ A big step can have several subsections or sub steps:
 
 > <question-title></question-title>
 >
-> 1. Question1?
+> 1. How case-sensitive is the Group tool? Can I only group by column values, and not row values?
 > 2. Question2?
 >
 > > <solution-title></solution-title>
 > >
-> > 1. Answer for question1
-> > 2. Answer for question2
+> > 1. **TODO** Answer for question1
+> > 2. **TODO** Answer for question2
 > >
 > {: .solution}
 >
@@ -820,8 +820,8 @@ ORDER BY psms.ln`
 >
 > > <solution-title></solution-title>
 > >
-> > 1. Answer for question1
-> > 2. Answer for question2
+> > 1. **TODO** Answer for question1
+> > 2. **TODO** Answer for question2
 > >
 > {: .solution}
 >
@@ -855,8 +855,8 @@ ORDER BY psms.ln`
 >
 > > <solution-title></solution-title>
 > >
-> > 1. Answer for question1
-> > 2. Answer for question2
+> > 1. **TODO** Answer for question1
+> > 2. **TODO** Answer for question2
 > >
 > {: .solution}
 >
@@ -890,8 +890,8 @@ ORDER BY psms.ln`
 >
 > > <solution-title></solution-title>
 > >
-> > 1. Answer for question1
-> > 2. Answer for question2
+> > 1. **TODO** Answer for question1
+> > 2. **TODO** Answer for question2
 > >
 > {: .solution}
 >
@@ -924,8 +924,8 @@ ORDER BY psms.ln`
 >
 > > <solution-title></solution-title>
 > >
-> > 1. Answer for question1
-> > 2. Answer for question2
+> > 1. **TODO** Answer for question1
+> > 2. **TODO** Answer for question2
 > >
 > {: .solution}
 >
@@ -959,8 +959,8 @@ ORDER BY psms.ln`
 >
 > > <solution-title></solution-title>
 > >
-> > 1. Answer for question1
-> > 2. Answer for question2
+> > 1. **TODO** Answer for question1
+> > 2. **TODO** Answer for question2
 > >
 > {: .solution}
 >
