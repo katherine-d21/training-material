@@ -137,12 +137,13 @@ The idea is to keep the theory description before quite simple to focus more on 
 {: .details}
 
 A big step can have several subsections or sub steps:
-
-
-
-We will use the Cut tool (**cite tool info?**) to select out the peptide and protein columns from the SearchGUI/PeptideShaker and MaxQuant Peptide Reports.
-
+>
+>
+>
+>
 ## Sub-step with **Cut**
+
+First, we will use the Cut tool (**cite tool info?**) to select out the peptide and protein columns from the SearchGUI/PeptideShaker and MaxQuant Peptide Reports.
 
 > <hands-on-title> Task description </hands-on-title>
 >
