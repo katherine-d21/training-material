@@ -115,7 +115,7 @@ Metaproteomics {% cite Metaproteomics_video %}  is the large-scale characterizat
 # Step-by-step analysis
 
 # Download Protein Sequences using taxon names
-First, we want to generate a large comprehensive protein sequence database using the UniProt XML Downloader to extract sequences for species detected using 16S rRNA sequencing. To do so, you will need a tabular file that contains a list of species of interest.
+First, we want to generate a large comprehensive protein sequence database using the UniProt XML Downloader to extract sequences for species of interest. To do so, you will need a tabular file that contains a list of species.
 
 For this tutorial, a literature survey was conducted to obtain 118 taxonomic species of organisms that are commonly associated with the female reproductive tract **(REF)**. This species list was used to generate a protein sequences FASTA database was generated using the UniProt XML Downloader tool within the Galaxy framework. In this tutorial, the Species FASTA database (3,383,217 sequences) has already been provided as an input. However, if you have your own list of species of interest as a tabular file (Your_Species_tabular.tabular), steps to generate a FASTA file from a tabular file have included:
 
