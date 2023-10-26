@@ -266,7 +266,7 @@ A big step can have several subsections or sub steps:
 
 
 ## Sub-step with **FASTA Merge Files and Filter Unique Sequences**
-Once generated, the Species UniProt database (~3.38 million sequences) will be merged with Human SwissProt database (reviewed only; ~20.4K sequences) and contaminant (cRAP) sequences database (116 sequences), which was then filtered to generate the large comprehensive database (~2.59 million sequences) that will be used to generate a compact database using MetaNovo.
+Once generated, the Species UniProt database (~3.38 million sequences) will be merged with Human SwissProt database (reviewed only; ~20.4K sequences) and contaminant (cRAP) sequences database (116 sequences) and filtered to generate the large comprehensive database (~2.59 million sequences). The large comprehensive database will be used to generate a compact database using MetaNovo, which is much more manageable.
 
 > <hands-on-title> Task description </hands-on-title>
 >
