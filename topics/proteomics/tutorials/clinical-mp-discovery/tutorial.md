@@ -220,101 +220,6 @@ The msconvert tool allows for the conversion of mass spectrometry data files bet
 >
 {: .question}
 
-## Sub-step with **FASTA Merge Files and Filter Unique Sequences**
-
-> <hands-on-title> Task description </hands-on-title>
->
-> 1. {% tool [FASTA Merge Files and Filter Unique Sequences](toolshed.g2.bx.psu.edu/repos/galaxyp/fasta_merge_files_and_filter_unique_sequences/fasta_merge_files_and_filter_unique_sequences/1.2.0) %} with the following parameters:
->    - *"Run in batch mode?"*: `Merge individual FASTAs (output collection if input is collection)`
->        - In *"Input FASTA File(s)"*:
->            - {% icon param-repeat %} *"Insert Input FASTA File(s)"*
->                - {% icon param-file %} *"FASTA File"*: `output_database` (output of **Protein Database Downloader** {% icon tool %})
->
->    ***TODO***: *Check parameter descriptions*
->
->    ***TODO***: *Consider adding a comment or tip box*
->
->    > <comment-title> short description </comment-title>
->    >
->    > A comment about the tool or something else. This box can also be in the main text
->    {: .comment}
->
-{: .hands_on}
-
-***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
-
-> <question-title></question-title>
->
-> 1. Question1?
-> 2. Question2?
->
-> > <solution-title></solution-title>
-> >
-> > 1. **TODO** Answer for question1
-> > 2. **TODO** Answer for question2
-> >
-> {: .solution}
->
-{: .question}
-
-## Sub-step with **MaxQuant**
-MaxQuant is a MS-based proteomics platform that is capable of processing raw data and provides improved mass precision and high precursor mass accuracy (HPMA), which resulted in increased protein identification and more in-depth proteomic analysis **(tool info)**. Raw MS/MS spectra will be searched against the reduced MetaNovo-generated database (~21.2k sequences).
-
-> <hands-on-title> Task description </hands-on-title>
->
-> 1. {% tool [MaxQuant](toolshed.g2.bx.psu.edu/repos/galaxyp/maxquant/maxquant/2.0.3.0+galaxy0) %} with the following parameters:
->    - In *"Input Options"*:
->        - {% icon param-file %} *"FASTA files"*: `output` (Input dataset)
->    - In *"Search Options"*:
->        - {% icon param-file %} *"Specify an experimental design template (if needed). For detailed instructions see the help text."*: `output` (Input dataset)
->        - *"minimum peptide length"*: `8`
->        - *"Match between runs"*: `Yes`
->        - *"Maximum peptide length for unspecific searches"*: `50`
->    - In *"Protein quantification"*:
->        - *"Use only unmodified peptides"*: `Yes`
->            - *"Modifications used in protein quantification"*: ``
->        - In *"LFQ Options"*:
->            - *"iBAQ (calculates absolute protein abundances by normalizing to copy number and not protein mass)"*: `No`
->    - In *"Parameter Group"*:
->        - {% icon param-repeat %} *"Insert Parameter Group"*
->            - {% icon param-collection %} *"Infiles"*: `output` (Input dataset collection)
->            - *"fixed modifications"*: ``
->            - *"variable modifications"*: ``
->            - *"enzyme"*: ``
->            - *"Quantitation Methods"*: `reporter ion MS2`
->                - *"isobaric labeling"*: `TMT11plex`
->                - *"Filter by PIF"*: `True`
->    - *"Generate PTXQC (proteomics quality control pipeline) report? (experimental setting)"*: `False`
->    - In *"Output Options"*:
->        - *"Select the desired outputs."*: ``
->
->    ***TODO***: *Check parameter descriptions*
->
->    ***TODO***: *Consider adding a comment or tip box*
->
->    > <comment-title> short description </comment-title>
->    >
->    > A comment about the tool or something else. This box can also be in the main text
->    {: .comment}
->
-{: .hands_on}
-
-***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
-
-> <question-title></question-title>
->
-> 1. What is the Experimental Design file for MaxQuant?
-> 2. Question2?
->
-> > <solution-title></solution-title>
-> >
-> > 1. **TODO** Answer for question1
-> > 2. **TODO** Answer for question2
-> >
-> {: .solution}
->
-{: .question}
-
 ## Sub-step with **Search GUI**
 SearchGUI is a database-searching tool that comprises different search engines to match sample MS/MS spectra to known peptide sequences **(cite ref)**. In our analysis, we will use **(list search engines)** as search algorithms within SearchGUI for matching spectra from mass spectrometry data against peptides from the protein sequence database.
 
@@ -355,77 +260,6 @@ The SearchGUI tool will perform database search based on the parameters we've se
 >
 {: .question}
 
-## Sub-step with **FASTA-to-Tabular**
-
-> <hands-on-title> Task description </hands-on-title>
->
-> 1. {% tool [FASTA-to-Tabular](toolshed.g2.bx.psu.edu/repos/devteam/fasta_to_tabular/fasta2tab/1.1.0) %} with the following parameters:
->    - {% icon param-file %} *"Convert these sequences"*: `output` (output of **FASTA Merge Files and Filter Unique Sequences** {% icon tool %})
->
->    ***TODO***: *Check parameter descriptions*
->
->    ***TODO***: *Consider adding a comment or tip box*
->
->    > <comment-title> short description </comment-title>
->    >
->    > A comment about the tool or something else. This box can also be in the main text
->    {: .comment}
->
-{: .hands_on}
-
-***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
-
-> <question-title></question-title>
->
-> 1. Question1?
-> 2. Question2?
->
-> > <solution-title></solution-title>
-> >
-> > 1. **TODO** Answer for question1
-> > 2. **TODO** Answer for question2
-> >
-> {: .solution}
->
-{: .question}
-
-## Sub-step with **Select**
-
-> <hands-on-title> Task description </hands-on-title>
->
-> 1. {% tool [Select](Grep1) %} with the following parameters:
->    - {% icon param-file %} *"Select lines from"*: `peptides` (output of **MaxQuant** {% icon tool %})
->    - *"that"*: `NOT Matching`
->    - *"the pattern"*: `(_HUMAN)|(_REVERSED)|(CON)|(con)`
->    - *"Keep header line"*: `Yes`
->
->    ***TODO***: *Check parameter descriptions*
->
->    ***TODO***: *Consider adding a comment or tip box*
->
->    > <comment-title> short description </comment-title>
->    >
->    > A comment about the tool or something else. This box can also be in the main text
->    {: .comment}
->
-{: .hands_on}
-
-***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
-
-> <question-title></question-title>
->
-> 1. Question1?
-> 2. Question2?
->
-> > <solution-title></solution-title>
-> >
-> > 1. **TODO** Answer for question1
-> > 2. **TODO** Answer for question2
-> >
-> {: .solution}
->
-{: .question}
-
 ## Sub-step with **Peptide Shaker**
 
 > <hands-on-title> Task description </hands-on-title>
@@ -452,84 +286,6 @@ The SearchGUI tool will perform database search based on the parameters we've se
 > <question-title></question-title>
 >
 > 1. What are the differences between the following reports from PeptideShaker: PSM report, Peptide report, and Protein report?
-> 2. Question2?
->
-> > <solution-title></solution-title>
-> >
-> > 1. **TODO** Answer for question1
-> > 2. **TODO** Answer for question2
-> >
-> {: .solution}
->
-{: .question}
-
-## Sub-step with **Filter Tabular**
-
-> <hands-on-title> Task description </hands-on-title>
->
-> 1. {% tool [Filter Tabular](toolshed.g2.bx.psu.edu/repos/iuc/filter_tabular/filter_tabular/3.3.0) %} with the following parameters:
->    - {% icon param-file %} *"Tabular Dataset to filter"*: `output` (output of **FASTA-to-Tabular** {% icon tool %})
->    - In *"Filter Tabular Input Lines"*:
->        - {% icon param-repeat %} *"Insert Filter Tabular Input Lines"*
->            - *"Filter By"*: `select columns`
->                - *"enter column numbers to keep"*: `1`
->        - {% icon param-repeat %} *"Insert Filter Tabular Input Lines"*
->            - *"Filter By"*: `regex replace value in column`
->                - *"enter column number to replace"*: `1`
->                - *"regex pattern"*: `^[^|]+[|]([^| ]+).*$`
->                - *"replacement expression"*: `\1`
->
->    ***TODO***: *Check parameter descriptions*
->
->    ***TODO***: *Consider adding a comment or tip box*
->
->    > <comment-title> short description </comment-title>
->    >
->    > A comment about the tool or something else. This box can also be in the main text
->    {: .comment}
->
-{: .hands_on}
-
-***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
-
-> <question-title></question-title>
->
-> 1. What’s the difference between a FASTA and Tabular output?
-> 2. Question2?
->
-> > <solution-title></solution-title>
-> >
-> > 1. **TODO** Answer for question1
-> > 2. **TODO** Answer for question2
-> >
-> {: .solution}
->
-{: .question}
-
-## Sub-step with **Cut**
-
-> <hands-on-title> Task description </hands-on-title>
->
-> 1. {% tool [Cut](Cut1) %} with the following parameters:
->    - *"Cut columns"*: `c1`
->    - {% icon param-file %} *"From"*: `out_file1` (output of **Select** {% icon tool %})
->
->    ***TODO***: *Check parameter descriptions*
->
->    ***TODO***: *Consider adding a comment or tip box*
->
->    > <comment-title> short description </comment-title>
->    >
->    > A comment about the tool or something else. This box can also be in the main text
->    {: .comment}
->
-{: .hands_on}
-
-***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
-
-> <question-title></question-title>
->
-> 1. Question1?
 > 2. Question2?
 >
 > > <solution-title></solution-title>
@@ -587,40 +343,6 @@ The SearchGUI tool will perform database search based on the parameters we've se
 >    - *"that"*: `NOT Matching`
 >    - *"the pattern"*: `(_HUMAN)|(_REVERSED)|(CON)|(con)`
 >    - *"Keep header line"*: `Yes`
->
->    ***TODO***: *Check parameter descriptions*
->
->    ***TODO***: *Consider adding a comment or tip box*
->
->    > <comment-title> short description </comment-title>
->    >
->    > A comment about the tool or something else. This box can also be in the main text
->    {: .comment}
->
-{: .hands_on}
-
-***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
-
-> <question-title></question-title>
->
-> 1. Question1?
-> 2. Question2?
->
-> > <solution-title></solution-title>
-> >
-> > 1. **TODO** Answer for question1
-> > 2. **TODO** Answer for question2
-> >
-> {: .solution}
->
-{: .question}
-
-## Sub-step with **Remove beginning**
-
-> <hands-on-title> Task description </hands-on-title>
->
-> 1. {% tool [Remove beginning](Remove beginning1) %} with the following parameters:
->    - {% icon param-file %} *"from"*: `out_file1` (output of **Cut** {% icon tool %})
 >
 >    ***TODO***: *Check parameter descriptions*
 >
@@ -721,13 +443,19 @@ The SearchGUI tool will perform database search based on the parameters we've se
 >
 {: .question}
 
-## Sub-step with **Group**
+
+
+## Sub-step with **FASTA Merge Files and Filter Unique Sequences**
+We will generate and merge the Human SwissProt Protein Database and contaminants (cRAP) and convert the resulting FASTA file to a tabular file that will be used in the Query Tabular tool to generate distinct microbial peptides from SearchGUI/PeptideShaker.
 
 > <hands-on-title> Task description </hands-on-title>
 >
-> 1. {% tool [Group](Grouping1) %} with the following parameters:
->    - {% icon param-file %} *"Select data"*: `out_file1` (output of **Remove beginning** {% icon tool %})
->    - *"Group by column"*: `c1`
+> 1. {% tool [FASTA Merge Files and Filter Unique Sequences](toolshed.g2.bx.psu.edu/repos/galaxyp/fasta_merge_files_and_filter_unique_sequences/fasta_merge_files_and_filter_unique_sequences/1.2.0) %} with the following parameters:
+>    - *"Run in batch mode?"*: `Merge individual FASTAs (output collection if input is collection)`
+>        - In *"Input FASTA File(s)"*:
+>            - {% icon param-repeat %} *"Insert Input FASTA File(s)"*
+>                - {% icon param-file %} *"FASTA File"*: `Human Swissprot Protein Database` (output of **Protein Database Downloader** {% icon tool %})
+>                - - {% icon param-file %} *"FASTA File"*: `Contaminants cRAP database` (output of **Protein Database Downloader** {% icon tool %})
 >
 >    ***TODO***: *Check parameter descriptions*
 >
@@ -744,7 +472,85 @@ The SearchGUI tool will perform database search based on the parameters we've se
 
 > <question-title></question-title>
 >
-> 1. How case-sensitive is the Group tool? Can I only group by column values, and not row values?
+> 1. Question1?
+> 2. Question2?
+>
+> > <solution-title></solution-title>
+> >
+> > 1. **TODO** Answer for question1
+> > 2. **TODO** Answer for question2
+> >
+> {: .solution}
+>
+{: .question}
+
+
+## Sub-step with **FASTA-to-Tabular**
+
+> <hands-on-title> Task description </hands-on-title>
+>
+> 1. {% tool [FASTA-to-Tabular](toolshed.g2.bx.psu.edu/repos/devteam/fasta_to_tabular/fasta2tab/1.1.0) %} with the following parameters:
+>    - {% icon param-file %} *"Convert these sequences"*: `output` (output of **FASTA Merge Files and Filter Unique Sequences** {% icon tool %})
+>
+>    ***TODO***: *Check parameter descriptions*
+>
+>    ***TODO***: *Consider adding a comment or tip box*
+>
+>    > <comment-title> short description </comment-title>
+>    >
+>    > A comment about the tool or something else. This box can also be in the main text
+>    {: .comment}
+>
+{: .hands_on}
+
+***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
+
+> <question-title></question-title>
+>
+> 1. Question1?
+> 2. Question2?
+>
+> > <solution-title></solution-title>
+> >
+> > 1. **TODO** Answer for question1
+> > 2. **TODO** Answer for question2
+> >
+> {: .solution}
+>
+{: .question}
+
+## Sub-step with **Filter Tabular**
+
+> <hands-on-title> Task description </hands-on-title>
+>
+> 1. {% tool [Filter Tabular](toolshed.g2.bx.psu.edu/repos/iuc/filter_tabular/filter_tabular/3.3.0) %} with the following parameters:
+>    - {% icon param-file %} *"Tabular Dataset to filter"*: `output` (output of **FASTA-to-Tabular** {% icon tool %})
+>    - In *"Filter Tabular Input Lines"*:
+>        - {% icon param-repeat %} *"Insert Filter Tabular Input Lines"*
+>            - *"Filter By"*: `select columns`
+>                - *"enter column numbers to keep"*: `1`
+>        - {% icon param-repeat %} *"Insert Filter Tabular Input Lines"*
+>            - *"Filter By"*: `regex replace value in column`
+>                - *"enter column number to replace"*: `1`
+>                - *"regex pattern"*: `^[^|]+[|]([^| ]+).*$`
+>                - *"replacement expression"*: `\1`
+>
+>    ***TODO***: *Check parameter descriptions*
+>
+>    ***TODO***: *Consider adding a comment or tip box*
+>
+>    > <comment-title> short description </comment-title>
+>    >
+>    > A comment about the tool or something else. This box can also be in the main text
+>    {: .comment}
+>
+{: .hands_on}
+
+***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
+
+> <question-title></question-title>
+>
+> 1. What’s the difference between a FASTA and Tabular output?
 > 2. Question2?
 >
 > > <solution-title></solution-title>
@@ -910,6 +716,216 @@ ORDER BY psms.ln`
 > {: .solution}
 >
 {: .question}
+
+
+## Sub-step with **MaxQuant**
+MaxQuant is a MS-based proteomics platform that is capable of processing raw data and provides improved mass precision and high precursor mass accuracy (HPMA), which resulted in increased protein identification and more in-depth proteomic analysis **(tool info)**. Raw MS/MS spectra will be searched against the reduced MetaNovo-generated database (~21.2k sequences).
+
+> <hands-on-title> Task description </hands-on-title>
+>
+> 1. {% tool [MaxQuant](toolshed.g2.bx.psu.edu/repos/galaxyp/maxquant/maxquant/2.0.3.0+galaxy0) %} with the following parameters:
+>    - In *"Input Options"*:
+>        - {% icon param-file %} *"FASTA files"*: `output` (Input dataset)
+>    - In *"Search Options"*:
+>        - {% icon param-file %} *"Specify an experimental design template (if needed). For detailed instructions see the help text."*: `output` (Input dataset)
+>        - *"minimum peptide length"*: `8`
+>        - *"Match between runs"*: `Yes`
+>        - *"Maximum peptide length for unspecific searches"*: `50`
+>    - In *"Protein quantification"*:
+>        - *"Use only unmodified peptides"*: `Yes`
+>            - *"Modifications used in protein quantification"*: ``
+>        - In *"LFQ Options"*:
+>            - *"iBAQ (calculates absolute protein abundances by normalizing to copy number and not protein mass)"*: `No`
+>    - In *"Parameter Group"*:
+>        - {% icon param-repeat %} *"Insert Parameter Group"*
+>            - {% icon param-collection %} *"Infiles"*: `output` (Input dataset collection)
+>            - *"fixed modifications"*: ``
+>            - *"variable modifications"*: ``
+>            - *"enzyme"*: ``
+>            - *"Quantitation Methods"*: `reporter ion MS2`
+>                - *"isobaric labeling"*: `TMT11plex`
+>                - *"Filter by PIF"*: `True`
+>    - *"Generate PTXQC (proteomics quality control pipeline) report? (experimental setting)"*: `False`
+>    - In *"Output Options"*:
+>        - *"Select the desired outputs."*: ``
+>
+>    ***TODO***: *Check parameter descriptions*
+>
+>    ***TODO***: *Consider adding a comment or tip box*
+>
+>    > <comment-title> short description </comment-title>
+>    >
+>    > A comment about the tool or something else. This box can also be in the main text
+>    {: .comment}
+>
+{: .hands_on}
+
+***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
+
+> <question-title></question-title>
+>
+> 1. What is the Experimental Design file for MaxQuant?
+> 2. Question2?
+>
+> > <solution-title></solution-title>
+> >
+> > 1. **TODO** Answer for question1
+> > 2. **TODO** Answer for question2
+> >
+> {: .solution}
+>
+{: .question}
+
+## Sub-step with **Select**
+
+> <hands-on-title> Task description </hands-on-title>
+>
+> 1. {% tool [Select](Grep1) %} with the following parameters:
+>    - {% icon param-file %} *"Select lines from"*: `peptides` (output of **MaxQuant** {% icon tool %})
+>    - *"that"*: `NOT Matching`
+>    - *"the pattern"*: `(_HUMAN)|(_REVERSED)|(CON)|(con)`
+>    - *"Keep header line"*: `Yes`
+>
+>    ***TODO***: *Check parameter descriptions*
+>
+>    ***TODO***: *Consider adding a comment or tip box*
+>
+>    > <comment-title> short description </comment-title>
+>    >
+>    > A comment about the tool or something else. This box can also be in the main text
+>    {: .comment}
+>
+{: .hands_on}
+
+***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
+
+> <question-title></question-title>
+>
+> 1. Question1?
+> 2. Question2?
+>
+> > <solution-title></solution-title>
+> >
+> > 1. **TODO** Answer for question1
+> > 2. **TODO** Answer for question2
+> >
+> {: .solution}
+>
+{: .question}
+
+
+
+
+
+## Sub-step with **Cut**
+
+> <hands-on-title> Task description </hands-on-title>
+>
+> 1. {% tool [Cut](Cut1) %} with the following parameters:
+>    - *"Cut columns"*: `c1`
+>    - {% icon param-file %} *"From"*: `out_file1` (output of **Select** {% icon tool %})
+>
+>    ***TODO***: *Check parameter descriptions*
+>
+>    ***TODO***: *Consider adding a comment or tip box*
+>
+>    > <comment-title> short description </comment-title>
+>    >
+>    > A comment about the tool or something else. This box can also be in the main text
+>    {: .comment}
+>
+{: .hands_on}
+
+***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
+
+> <question-title></question-title>
+>
+> 1. Question1?
+> 2. Question2?
+>
+> > <solution-title></solution-title>
+> >
+> > 1. **TODO** Answer for question1
+> > 2. **TODO** Answer for question2
+> >
+> {: .solution}
+>
+{: .question}
+
+
+
+## Sub-step with **Remove beginning**
+
+> <hands-on-title> Task description </hands-on-title>
+>
+> 1. {% tool [Remove beginning](Remove beginning1) %} with the following parameters:
+>    - {% icon param-file %} *"from"*: `out_file1` (output of **Cut** {% icon tool %})
+>
+>    ***TODO***: *Check parameter descriptions*
+>
+>    ***TODO***: *Consider adding a comment or tip box*
+>
+>    > <comment-title> short description </comment-title>
+>    >
+>    > A comment about the tool or something else. This box can also be in the main text
+>    {: .comment}
+>
+{: .hands_on}
+
+***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
+
+> <question-title></question-title>
+>
+> 1. Question1?
+> 2. Question2?
+>
+> > <solution-title></solution-title>
+> >
+> > 1. **TODO** Answer for question1
+> > 2. **TODO** Answer for question2
+> >
+> {: .solution}
+>
+{: .question}
+
+
+
+## Sub-step with **Group**
+
+> <hands-on-title> Task description </hands-on-title>
+>
+> 1. {% tool [Group](Grouping1) %} with the following parameters:
+>    - {% icon param-file %} *"Select data"*: `out_file1` (output of **Remove beginning** {% icon tool %})
+>    - *"Group by column"*: `c1`
+>
+>    ***TODO***: *Check parameter descriptions*
+>
+>    ***TODO***: *Consider adding a comment or tip box*
+>
+>    > <comment-title> short description </comment-title>
+>    >
+>    > A comment about the tool or something else. This box can also be in the main text
+>    {: .comment}
+>
+{: .hands_on}
+
+***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
+
+> <question-title></question-title>
+>
+> 1. How case-sensitive is the Group tool? Can I only group by column values, and not row values?
+> 2. Question2?
+>
+> > <solution-title></solution-title>
+> >
+> > 1. **TODO** Answer for question1
+> > 2. **TODO** Answer for question2
+> >
+> {: .solution}
+>
+{: .question}
+
+
 
 ## Sub-step with **Concatenate datasets**
 
