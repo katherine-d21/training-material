@@ -137,8 +137,11 @@ The idea is to keep the theory description before quite simple to focus more on 
 {: .details}
 
 A big step can have several subsections or sub steps:
->
->
+
+
+> # Extraction of Microbial Peptides
+Now that we have identified microbial peptides from SearchGUI/PeptideShaker and MaxQuant, we need to extract the microbial peptide sequences and group them to obtain a list of distinct microbial peptides. This list of distinct peptides will be used as input for PepQuery2 to verify confident microbial peptides.
+
 >
 >
 ## Sub-step with **Cut**
@@ -359,9 +362,11 @@ We generate and merge Human UniProt (with Isoforms) and contaminants (cRAP) to m
 >
 {: .question}
 
-## Sub-step with **PepQuery2**
 
-We will use the list of Distinct Peptides (from the Discovery Module, **cite**), Human UniProt+Isoforms+cRAP database, and our MGF file collection as inputs for PepQuery2. The outputs we are interested in are the four PSM Rank (txt) files (one for each MGF file).
+## Peptide verification using PepQuery
+The PepQuery2 tool will be used to validate the identified microbial peptides from SearchGUI/PeptideShaker and MaxQuant to ensure that they are indeed of microbial origin and that human peptides were not misassigned. We will use the list of Distinct Peptides (from the Discovery Module, **cite**), Human UniProt+Isoforms+cRAP database, and our MGF file collection as inputs for PepQuery2. The outputs we are interested in are the four PSM Rank (txt) files (one for each MGF file).
+
+Interestingly, the PepQuery tool does not rely on searching peptides against a reference protein sequence database as “traditional” shotgun proteomics does, which enables it to identify novel, disease-specific sequences with sensitivity and specificity in its protein validation (**cite tool info**).
 
 
 > <hands-on-title> Task description </hands-on-title>
@@ -764,6 +769,9 @@ from t1`
 
 Using the UniProt IDs from Query Tabular, we will be able to generate a FASTA database for our PepQuery-verified peptides.
 
+
+
+
 > <hands-on-title> Task description </hands-on-title>
 >
 > 1. {% tool [UniProt](toolshed.g2.bx.psu.edu/repos/galaxyp/uniprotxml_downloader/uniprotxml_downloader/2.4.0) %} with the following parameters:
@@ -802,6 +810,7 @@ Using the UniProt IDs from Query Tabular, we will be able to generate a FASTA da
 
 ## Sub-step with **FASTA Merge Files and Filter Unique Sequences**
 
+## Generation of Compact Verified Database with UniProt
 Lastly, we will merge the Human UniProt (with isoforms), contaminants (cRAP) and the PepQuery-verified FASTA databases into one Quantitation Database that will be used as input for the Quantitation Module (**add link for Quantitation Module**).
 
 > <hands-on-title> Task description </hands-on-title>
