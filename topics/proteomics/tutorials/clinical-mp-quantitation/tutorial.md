@@ -147,7 +147,7 @@ A big step can have several subsections or sub steps:
 >
 > 1. {% tool [MaxQuant](toolshed.g2.bx.psu.edu/repos/galaxyp/maxquant/maxquant/1.6.17.0+galaxy4) %} with the following parameters:
 >    - In *"Input Options"*:
->        - {% icon param-file %} *"FASTA files"*: `output` (output of **FASTA Merge Files and Filter Unique Sequences** {% icon tool %})
+>        - {% icon param-file %} *"FASTA files"*: `Quantitation Database for MaxQuant` (Input dataset)
 >    - In *"Search Options"*:
 >        - {% icon param-file %} *"Specify an experimental design template (if needed). For detailed                           instructions see the help text."*: `output` (Input dataset)
 >        - *"minimum peptide length"*: `8`
@@ -185,13 +185,13 @@ A big step can have several subsections or sub steps:
 
 > <question-title></question-title>
 >
-> 1. Question1?
-> 2. Question2?
+> 1. Why can we switch back to using RAW files for MaxQuant, instead of using MGF files?
+> 2. Previously, we used MaxQuant in the Discovery workflow. Why are we using MaxQuant again, instead of Search GUI/PeptideShaker?
 >
 > > <solution-title></solution-title>
 > >
-> > 1. Answer for question1
-> > 2. Answer for question2
+> > 1. **TODO** Answer for question1
+> > 2. **TODO** Answer for question2
 > >
 > {: .solution}
 >
@@ -226,8 +226,8 @@ A big step can have several subsections or sub steps:
 >
 > > <solution-title></solution-title>
 > >
-> > 1. Answer for question1
-> > 2. Answer for question2
+> > 1. **TODO** Answer for question1
+> > 2. **TODO** Answer for question2
 > >
 > {: .solution}
 >
@@ -262,8 +262,8 @@ A big step can have several subsections or sub steps:
 >
 > > <solution-title></solution-title>
 > >
-> > 1. Answer for question1
-> > 2. Answer for question2
+> > 1. **TODO** Answer for question1
+> > 2. **TODO** Answer for question2
 > >
 > {: .solution}
 >
@@ -297,8 +297,8 @@ A big step can have several subsections or sub steps:
 >
 > > <solution-title></solution-title>
 > >
-> > 1. Answer for question1
-> > 2. Answer for question2
+> > 1. **TODO** Answer for question1
+> > 2. **TODO** Answer for question2
 > >
 > {: .solution}
 >
@@ -332,8 +332,8 @@ A big step can have several subsections or sub steps:
 >
 > > <solution-title></solution-title>
 > >
-> > 1. Answer for question1
-> > 2. Answer for question2
+> > 1. **TODO** Answer for question1
+> > 2. **TODO** Answer for question2
 > >
 > {: .solution}
 >
@@ -367,8 +367,8 @@ A big step can have several subsections or sub steps:
 >
 > > <solution-title></solution-title>
 > >
-> > 1. Answer for question1
-> > 2. Answer for question2
+> > 1. **TODO** Answer for question1
+> > 2. **TODO** Answer for question2
 > >
 > {: .solution}
 >
@@ -402,8 +402,8 @@ A big step can have several subsections or sub steps:
 >
 > > <solution-title></solution-title>
 > >
-> > 1. Answer for question1
-> > 2. Answer for question2
+> > 1. **TODO** Answer for question1
+> > 2. **TODO** Answer for question2
 > >
 > {: .solution}
 >
