@@ -250,6 +250,45 @@ A big step can have several subsections or sub steps:
 >
 {: .question}
 
+
+## Sub-step with **Select**
+
+> <hands-on-title> Task description </hands-on-title>
+>
+> 1. {% tool [Select](Grep1) %} with the following parameters:
+>    - {% icon param-file %} *"Select lines from"*: `out_file1` (output of **Select** {% icon tool %})
+>    - *"that"*: `NOT Matching`
+>    - *"the pattern"*: `(REV)|(con)`
+>    - *"Keep header line"*: `Yes`
+>
+>    ***TODO***: *Check parameter descriptions*
+>
+>    ***TODO***: *Consider adding a comment or tip box*
+>
+>    > <comment-title> short description </comment-title>
+>    >
+>    > A comment about the tool or something else. This box can also be in the main text
+>    {: .comment}
+>
+{: .hands_on}
+
+***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
+
+> <question-title></question-title>
+>
+> 1. How are we still able to generate human proteins even after filtering them out in earlier steps?
+> 2. Question2?
+>
+> > <solution-title></solution-title>
+> >
+> > 1. **TODO** Answer for question1
+> > 2. **TODO** Answer for question2
+> >
+> {: .solution}
+>
+{: .question}
+
+
 ## Sub-step with **MSstatsTMT**
 
 > <hands-on-title> Task description </hands-on-title>
@@ -283,54 +322,19 @@ A big step can have several subsections or sub steps:
 
 > <question-title></question-title>
 >
-> 1. Question1?
+> 1. How do I save/export graphics for figures?
 > 2. Question2?
 >
 > > <solution-title></solution-title>
 > >
-> > 1. Answer for question1
-> > 2. Answer for question2
+> > 1. **TODO** Answer for question1
+> > 2. **TODO** Answer for question2
 > >
 > {: .solution}
 >
 {: .question}
 
-## Sub-step with **Select**
 
-> <hands-on-title> Task description </hands-on-title>
->
-> 1. {% tool [Select](Grep1) %} with the following parameters:
->    - {% icon param-file %} *"Select lines from"*: `out_file1` (output of **Select** {% icon tool %})
->    - *"that"*: `NOT Matching`
->    - *"the pattern"*: `(REV)|(con)`
->    - *"Keep header line"*: `Yes`
->
->    ***TODO***: *Check parameter descriptions*
->
->    ***TODO***: *Consider adding a comment or tip box*
->
->    > <comment-title> short description </comment-title>
->    >
->    > A comment about the tool or something else. This box can also be in the main text
->    {: .comment}
->
-{: .hands_on}
-
-***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
-
-> <question-title></question-title>
->
-> 1. Question1?
-> 2. Question2?
->
-> > <solution-title></solution-title>
-> >
-> > 1. Answer for question1
-> > 2. Answer for question2
-> >
-> {: .solution}
->
-{: .question}
 
 ## Sub-step with **MSstatsTMT**
 
