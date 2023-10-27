@@ -171,8 +171,8 @@ First, we will use the Cut tool (**cite tool info?**) to select out the peptide 
 >
 > > <solution-title></solution-title>
 > >
-> > 1. Answer for question1
-> > 2. Answer for question2
+> > 1. **TODO** Answer for question1
+> > 2. **TODO** Answer for question2
 > >
 > {: .solution}
 >
@@ -206,8 +206,8 @@ First, we will use the Cut tool (**cite tool info?**) to select out the peptide 
 >
 > > <solution-title></solution-title>
 > >
-> > 1. Answer for question1
-> > 2. Answer for question2
+> > 1. **TODO** Answer for question1
+> > 2. **TODO** Answer for question2
 > >
 > {: .solution}
 >
@@ -242,8 +242,8 @@ Then, we will remove the header line from each of the Cut outputs in order to co
 >
 > > <solution-title></solution-title>
 > >
-> > 1. Answer for question1
-> > 2. Answer for question2
+> > 1. **TODO** Answer for question1
+> > 2. **TODO** Answer for question2
 > >
 > {: .solution}
 >
@@ -276,8 +276,8 @@ Then, we will remove the header line from each of the Cut outputs in order to co
 >
 > > <solution-title></solution-title>
 > >
-> > 1. Answer for question1
-> > 2. Answer for question2
+> > 1. **TODO** Answer for question1
+> > 2. **TODO** Answer for question2
 > >
 > {: .solution}
 >
@@ -312,8 +312,8 @@ We will now concatenate the peptide and protein datasets from SearchGUI/PeptideS
 >
 > > <solution-title></solution-title>
 > >
-> > 1. Answer for question1
-> > 2. Answer for question2
+> > 1. **TODO** Answer for question1
+> > 2. **TODO** Answer for question2
 > >
 > {: .solution}
 >
@@ -352,8 +352,8 @@ We generate and merge Human UniProt (with Isoforms) and contaminants (cRAP) to m
 >
 > > <solution-title></solution-title>
 > >
-> > 1. Answer for question1
-> > 2. Answer for question2
+> > 1. **TODO** Answer for question1
+> > 2. **TODO** Answer for question2
 > >
 > {: .solution}
 >
@@ -416,8 +416,8 @@ We will use the list of Distinct Peptides (from the Discovery Module, **cite**),
 >
 > > <solution-title></solution-title>
 > >
-> > 1. Answer for question1
-> > 2. Answer for question2
+> > 1. **TODO** Answer for question1
+> > 2. **TODO** Answer for question2
 > >
 > {: .solution}
 >
@@ -454,8 +454,8 @@ Remember that PepQuery2 generates a PSM Rank file for each input MGF file, so we
 >
 > > <solution-title></solution-title>
 > >
-> > 1. Answer for question1
-> > 2. Answer for question2
+> > 1. **TODO** Answer for question1
+> > 2. **TODO** Answer for question2
 > >
 > {: .solution}
 >
@@ -494,8 +494,8 @@ Now, we want to filter for confident peptides from PepQuery2.
 >
 > > <solution-title></solution-title>
 > >
-> > 1. Answer for question1
-> > 2. Answer for question2
+> > 1. **TODO** Answer for question1
+> > 2. **TODO** Answer for question2
 > >
 > {: .solution}
 >
@@ -528,8 +528,8 @@ Now, we want to filter for confident peptides from PepQuery2.
 >
 > > <solution-title></solution-title>
 > >
-> > 1. Answer for question1
-> > 2. Answer for question2
+> > 1. **TODO** Answer for question1
+> > 2. **TODO** Answer for question2
 > >
 > {: .solution}
 >
@@ -563,8 +563,8 @@ Now, we want to filter for confident peptides from PepQuery2.
 >
 > > <solution-title></solution-title>
 > >
-> > 1. Answer for question1
-> > 2. Answer for question2
+> > 1. **TODO** Answer for question1
+> > 2. **TODO** Answer for question2
 > >
 > {: .solution}
 >
@@ -615,8 +615,8 @@ INNER JOIN  prot on pep.mpep=prot.pep `
 >
 > > <solution-title></solution-title>
 > >
-> > 1. Answer for question1
-> > 2. Answer for question2
+> > 1. **TODO** Answer for question1
+> > 2. **TODO** Answer for question2
 > >
 > {: .solution}
 >
@@ -649,8 +649,8 @@ INNER JOIN  prot on pep.mpep=prot.pep `
 >
 > > <solution-title></solution-title>
 > >
-> > 1. Answer for question1
-> > 2. Answer for question2
+> > 1. **TODO** Answer for question1
+> > 2. **TODO** Answer for question2
 > >
 > {: .solution}
 >
@@ -690,8 +690,8 @@ Using the Group tool, we will be able to select out distinct (unique) peptides a
 >
 > > <solution-title></solution-title>
 > >
-> > 1. Answer for question1
-> > 2. Answer for question2
+> > 1. **TODO** Answer for question1
+> > 2. **TODO** Answer for question2
 > >
 > {: .solution}
 >
@@ -748,13 +748,13 @@ from t1`
 
 > <question-title></question-title>
 >
-> 1. Question1?
-> 2. Question2?
+> 1. What is the accession number of a protein?
+> 2. Can there be multiple accession numbers for one peptide or protein?
 >
 > > <solution-title></solution-title>
 > >
-> > 1. Answer for question1
-> > 2. Answer for question2
+> > 1. **TODO** Answer for question1
+> > 2. **TODO** Answer for question2
 > >
 > {: .solution}
 >
@@ -793,8 +793,8 @@ Using the UniProt IDs from Query Tabular, we will be able to generate a FASTA da
 >
 > > <solution-title></solution-title>
 > >
-> > 1. Answer for question1
-> > 2. Answer for question2
+> > 1. **TODO** Answer for question1
+> > 2. **TODO** Answer for question2
 > >
 > {: .solution}
 >
@@ -832,8 +832,8 @@ Lastly, we will merge the Human UniProt (with isoforms), contaminants (cRAP) and
 >
 > > <solution-title></solution-title>
 > >
-> > 1. Answer for question1
-> > 2. Answer for question2
+> > 1. **TODO** Answer for question1
+> > 2. **TODO** Answer for question2
 > >
 > {: .solution}
 >
