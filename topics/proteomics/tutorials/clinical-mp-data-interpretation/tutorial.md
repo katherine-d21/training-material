@@ -140,6 +140,8 @@ A big step can have several subsections or sub steps:
 
 ## Sub-step with **Unipept**
 
+To generate plots, we will use the Unipept tool in the Galaxy framework (**cite tool info**). Unipept outputs will include a taxonomy tree, Enzyme Commission (EC) protein tree and EC terms, Gene Ontology (GO) terms, and InterPro output (functional analysis of proteins).
+
 > <hands-on-title> Task description </hands-on-title>
 >
 > 1. {% tool [Unipept](toolshed.g2.bx.psu.edu/repos/galaxyp/unipept/unipept/4.5.1) %} with the following parameters:
@@ -290,6 +292,10 @@ A big step can have several subsections or sub steps:
 
 
 ## Sub-step with **MSstatsTMT**
+
+We will then use the protein groups and evidence file from our MaxQuant outputs earlier in this tutoriral as inputs for MSstatsTMT (**cite tool info**).
+
+We have also provided annotation and comparison matrix files as inputs for MSstatsTMT. The annotation will instruct this tool how to combine quantitations, and the comparison matrix is required when more than two groups are present. Here, we are comparing healthy, benign, and ovca.
 
 > <hands-on-title> Task description </hands-on-title>
 >
