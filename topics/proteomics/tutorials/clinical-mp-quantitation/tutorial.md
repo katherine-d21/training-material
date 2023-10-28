@@ -143,6 +143,10 @@ A big step can have several subsections or sub steps:
 
 ## Sub-step with **MaxQuant**
 
+In the Discovery Module (**cite Discovery module**), we used MaxQuant (**cite tool**) to identify peptides for verification. Now, we will again use MaxQuant to further quantify the PepQuery-verified peptides, both microbial and human.
+
+The outputs we are most interested in consist of the MaxQuant Evidence file, MaxQuant Protein Groups, and MaxQuant Peptides. The MaxQuant Peptides file will allow us to group them to generate a list of quantified microbial peptides.
+
 > <hands-on-title> Task description </hands-on-title>
 >
 > 1. {% tool [MaxQuant](toolshed.g2.bx.psu.edu/repos/galaxyp/maxquant/maxquant/1.6.17.0+galaxy4) %} with the following parameters:
