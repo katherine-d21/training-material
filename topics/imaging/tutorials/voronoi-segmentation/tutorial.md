@@ -24,15 +24,21 @@ requirements:
     topic_name: imaging
     tutorials:
       - imaging-introduction
-contributors:
-- evenmm
-- rmassei
-- kostrykin
-- annefou
+
+contributions:
+  authorship:
+    - evenmm
+    - rmassei
+    - kostrykin
+    - annefou
+  funding:
+    - fiesta
+    - oscars
 tags:
 - imageanalysis
 - segmentation
 - voronoi
+
 ---
 
 
@@ -126,7 +132,7 @@ In principle, this tutorial can be followed with any type of data provided that 
 > 
 >    {% snippet faqs/galaxy/histories_create_new.md %}
 > 
-> 2. Import {% icon galaxy-upload %} the following dataset from [Zenodo](https://zenodo.org/records/15172302). 
+> 2. Import {% icon galaxy-upload %} the following dataset from [Zenodo]({{ page.zenodo_link }}). 
 > 
 >    ```
 >    https://zenodo.org/records/15281843/files/images_and_seeds.zip
